@@ -35,13 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const taskLabel = document.createElement('p');
         taskLabel.innerHTML = taskText;
-        taskLabel.className = 'task-label slide-in no-select'; // Add the no-select class here
+        taskLabel.className = 'task-label slide-in no-select';
         taskLabel.addEventListener('dblclick', revealDeleteButton);
         newTask.appendChild(taskLabel);
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
-        deleteButton.className = 'delete-task hidden no-select'; // Add the no-select class here
+        deleteButton.className = 'delete-task hidden no-select';
         deleteButton.addEventListener('click', deleteTask);
         newTask.appendChild(deleteButton);
 
