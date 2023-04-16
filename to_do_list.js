@@ -3,10 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskInput = document.getElementById('new-task');
     const taskList = document.getElementById('task-list');
 
-    // Load tasks from localStorage
     loadTasksFromStorage();
 
-    // Modify the form event listener
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
