@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskInput = document.getElementById('new-task');
     const taskList = document.getElementById('task-list');
 
+    // Load tasks from localStorage
     loadTasksFromStorage();
 
+    // Modify the form event listener
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
@@ -33,13 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const taskLabel = document.createElement('p');
         taskLabel.innerHTML = taskText;
-        taskLabel.className = 'task-label slide-in';
+        taskLabel.className = 'task-label slide-in no-select'; // Add the no-select class here
         taskLabel.addEventListener('dblclick', revealDeleteButton);
         newTask.appendChild(taskLabel);
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
-        deleteButton.className = 'delete-task hidden';
+        deleteButton.className = 'delete-task hidden no-select'; // Add the no-select class here
         deleteButton.addEventListener('click', deleteTask);
         newTask.appendChild(deleteButton);
 
