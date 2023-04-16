@@ -61,6 +61,13 @@ button {
   cursor: pointer;
 }
 
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 #task-list {
   padding: 0;
   width: 100%;
